@@ -5,6 +5,15 @@ import time
 import requests
 import re
 from threading import Timer
+# '在这里输入你的SendKey'
+SendKey_def = -1
+# '这里输入你的微博Cookie'
+weibo_cookie = -1
+'在这里输入你的知乎Cookie'
+zhihu_cookie = -1
+if weibo_cookie == -1 or weibo_cookie == -1:
+    print('请在main.py文件顶部完善Cookie')
+
 
 
 def zhihu_top_spider():
@@ -15,7 +24,7 @@ def zhihu_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie':'_zap=411babfc-e770-465d-b7b9-52bffc363e0b; d_c0="AFCl2apQlRCPTjYea_vwVbIsuEsSzCwgVT4=|1577678274"; _xsrf=wVSeGxps1Mr2isWB66HrocZX6URQBVsF; __utmz=51854390.1578986731.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _ga=GA1.2.1360518270.1578986731; tst=h; tshl=; r_cap_id="Mzk2ZjZkNWI4NzU5NDRmNWI4MDAzNDdhZWY0ZTQ5ZmY=|1605663975|2f22e0b5b7886a8e7ad4888b95cee02fdf92c7d4"; cap_id="NTY2Nzc1NTc4ZjQzNDE1OThhYTEyNjAwMTQzYjE0OTE=|1605663975|b1b41fbfa0bf01a1fb9b19cd5798d89c80bc5e71"; l_cap_id="MDMwNmVkNzk2NWE5NGUwMDk5YmU0YzhjZjRhNmZjMTY=|1605663975|19bb84461c542a94d4680d2a6d85fac236eda92c"; auth_type=d2VjaGF0|1605663988|5e27b05698d15fdd7635fe17372ac5a45e821182; token="MzlfOG05cDJ5eFNYOEItWExzYzEyNE1fLTlhalRmOUZNYlViZ0J0NVpFQ0lRZXFpNHlHYUdHQmtiVnZZRXZ4R0ZGR0d1R1FZcnRjd2dsVy1JM2FJUGxKMmR4SjlVMTh0aVpmYnRhaXNwWTU1RGs=|1605663988|0b463576fd78ec808adb49427335ed997666c3f8"; client_id="bzNwMi1qalRYTzVleHFybnl6MXNia3Y4eE5TRQ==|1605663988|7c160c43891153984832b917c6f4b0d987030a6f"; capsion_ticket="2|1:0|10:1605664010|14:capsion_ticket|44:OWYwMmJmMDJlZTNiNDVhMWE4OTdkOGE5ZDEwMzgwOWE=|cf30d172ad6cc7007c71005abe6d3a0578f24a7cbdee57c04424113022ab2d45"; z_c0="2|1:0|10:1605664010|4:z_c0|92:Mi4xM3dSNkFBQUFBQUFBVUtYWnFsQ1ZFQ1lBQUFCZ0FsVk5Dc3VoWUFDaDU4dVZOcG1EcVZXanJ3eXJZcS1vNVVkUWJn|f917ca7c073c036e10e76bf2a99493ff49dc4b2a352005a27aece3a7afb64a0e"; __utmv=51854390.100-1|2=registration_date=20140908=1^3=entry_date=20140908=1; __utma=51854390.1360518270.1578986731.1606379460.1606464431.15; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1606909001,1606969367,1606996215,1606997480; q_c1=1bfa41cae2d040b7a8d6dfd02376f258|1606997513000|1578986733000; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1607041079; SESSIONID=MMZ1yQlaXOQDOBQQ5em6ILYs40u1r1hHHaQwXsurFtu; KLBRSID=2177cbf908056c6654e972f5ddc96dc2|1607041113|1607041067; JOID=VVwSC0s7Hanht_a9ODRZ-0m4bjYpdVP82Mmk0lZkUfuq8LPvamKRZ7Gz9rE_Mm0789kzH5y2Qksytqk4WJ-MF2g=; osd=VVgWBUw7Ga3vsPa5PDpe-028YDEpcVfy38mg1lhjUf-u_rTvbmafYLG38r84Mmk__d4zG5i4RUs2sqc_WJuIGW8=',
+        'Cookie': zhihu_cookie,
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
         # 'Path': '/hot',
@@ -62,7 +71,7 @@ def weibo_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie': 'SINAGLOBAL=9427721340678.658.1577837894348; SSOLoginState=1606877212; _s_tentry=login.sina.com.cn; Apache=4679169351629.784.1606877183479; ULV=1606877183484:125:2:3:4679169351629.784.1606877183479:1606805101522; SCF=AipCrdtDVs0DMqiAcDCIu5DlVqhgUBPQvBEJaBBCPMkj7Iiju_Up6h_RuNsizyYJ8Nn9vUau4asYyR0YiUiymUQ.; SUB=_2A25yzfh-DeRhGeBN6VYY8CjNzjuIHXVRu262rDV8PUJbmtAfLVGgkW9NRJG5hwU2chxpZfciRT2Sgjtll-2XD2P6; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9Wh.TQ2B19Sr2bKsk3uqncwL5JpX5K-hUgL.Foq0eoB4ehqpSKM2dJLoIEXLxKML12-L12zLxKMLBKML1h5LxK.LBo.L1h-LxKqL1-eLB-eLxK.LBo.L1h-t; ALF=1638579116; wvr=6; UOR=,,login.sina.com.cn; webim_unReadCount=%7B%22time%22%3A1607043089459%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A4%2C%22msgbox%22%3A0%7D; WBStorage=8daec78e6a891122|undefined',
+        'Cookie': weibo_cookie,
         'Host': 's.weibo.com',
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
@@ -111,15 +120,16 @@ def auto_push(key, mode):
     }
     req = requests.post(api, data)
     return req
-    # print('can do')
+
 
 def auto_push_repeat(key, hour):
     req1 = auto_push(key, 'baidu')
     req2 = auto_push(key, 'zhihu') 
     req3 = auto_push(key, 'weibo')
-    global timer
-    timer = Timer(int(hour) * 3600, auto_push_repeat, (key, hour))
-    timer.start()
+    if hour != 0:
+        global timer
+        timer = Timer(hour * 3600, auto_push_repeat, (key, hour))
+        timer.start()
 
 
 
@@ -140,7 +150,7 @@ class work(QWidget):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
         # 各按钮显示设计
-        button_display_1 = QPushButton('自动推送', self)
+        button_display_1 = QPushButton('全部推送', self)
         button_display_1.resize(100, 50)
         button_display_1.move(150, 300)
         button_display_2 = QPushButton('知乎头条推送', self)
@@ -179,22 +189,39 @@ class work(QWidget):
     # 功能设计
 
     def display_baidu(self):
-        SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e60051aa5f75deaff33121df6635fc6e4e36f6fa'
-        req = auto_push(SCKEY, 'baidu')
+        try:
+            SCKEY = self.te1.text() if self.te1.text() != '' else SendKey_def
+            assert (SCKEY != '')
+            req = auto_push(SCKEY, 'baidu')
+        except:
+            print('输入有误')
+
 
     def display_zhihu(self):
-        SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e60051aa5f75deaff33121df6635fc6e4e36f6fa'
-        req = auto_push(SCKEY, 'zhihu')
+        try:
+            SCKEY = self.te1.text() if self.te1.text() != '' else SendKey_def
+            assert (SCKEY != '')
+            req = auto_push(SCKEY, 'zhihu')
+        except:
+            print('输入有误')
 
     def display_weibo(self):
-        SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e60051aa5f75deaff33121df6635fc6e4e36f6fa'
-        req = auto_push(SCKEY, 'weibo')
+        try:
+            SCKEY = self.te1.text() if self.te1.text() != '' else SendKey_def
+            assert (SCKEY != '')
+            req = auto_push(SCKEY, 'weibo')
+        except:
+            print('输入有误')
 
     def display_auto(self):
-        SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e60051aa5f75deaff33121df6635fc6e4e36f6fa'
-        hour = self.te2.text() if self.te2.text() != '' else '3'
-        req = auto_push_repeat(SCKEY, hour)
-
+        try:
+            SCKEY = self.te1.text() if self.te1.text() != '' else SendKey_def
+            assert (SCKEY != '')
+            hour = int(self.te2.text()) if self.te2.text() != '' else 0
+            assert (isinstance(hour, int) or isinstance(hour, float))
+            req = auto_push_repeat(SCKEY, hour)
+        except:
+            print('输入有误')
 
 
 
