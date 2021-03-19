@@ -9,7 +9,7 @@ from threading import Timer
 SendKey_def = -1
 # '这里输入你的微博Cookie'
 weibo_cookie = -1
-'在这里输入你的知乎Cookie'
+# '在这里输入你的知乎Cookie'
 zhihu_cookie = -1
 if weibo_cookie == -1 or weibo_cookie == -1:
     print('请在main.py文件顶部完善Cookie')
