@@ -5,14 +5,9 @@ import time
 import requests
 import re
 from threading import Timer
-# '在这里输入你的SendKey'
+# 在这里输入你的SendKey
 SendKey_def = -1
-# '这里输入你的微博Cookie'
-weibo_cookie = -1
-# '在这里输入你的知乎Cookie'
-zhihu_cookie = -1
-if weibo_cookie == -1 or weibo_cookie == -1:
-    print('请在main.py文件顶部完善Cookie')
+# 请在22、69行填入对应cookie
 
 
 
@@ -24,7 +19,7 @@ def zhihu_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie': zhihu_cookie,
+        'Cookie': '在这里填写你的zhihu_cookie',
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
         # 'Path': '/hot',
@@ -71,7 +66,7 @@ def weibo_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie': weibo_cookie,
+        'Cookie': '在这里填写你的weibo_cookie',
         'Host': 's.weibo.com',
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
