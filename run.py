@@ -17,7 +17,7 @@ def zhihu_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie':'_zap=411babfc-e770-465d-b7b9-52bffc363e0b; d_c0="ACl2apQlRCPTjYea_vwVbIsuEsSzCwgVT4=|1577678274"; _xsrf=wVSeGxps1Mr2isWB66HrocZX6URQBVsF; _ga=GA1.2.1360518270.1578986731; __snaker__id=v5ifdofM1mvp3OvV; _9755xjdesxxd_=32; YD00517437729195%3AWM_TID=AsFC%2FPZBCG1AQRBUBUMuxra6q%2FdcNa72; q_c1=1bfa41cae2d040b7a8d6dfd02376f258|1622960582000|1578986733000; __utma=51854390.1360518270.1578986731.1606464431.1622960582.16; __utmz=51854390.1622960582.16.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=51854390.000--|2=registration_date=20140908=1^3=entry_date=20200114=1; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1626311893; captcha_session_v2="2|1:0|10:1626311895|18:captcha_session_v2|88:bXhZNDJtL09ySSthdVp6ekh5T1haeWMyd2Q0YkE4Mk1UYUNRalgrdzhLOTV3cG4rMm1uRXVNbFNrbkE4RU5lcA==|a954766337cb4dd4b69241c2d4be653e230b097b7e4ca0790f882ae63cf88b5e"; SESSIONID=LxrtPPcB3r4q2rCQNg6FqEDS2TajlTKdUUdeaFZsnlJ; JOID=UlwVCkubf07VfDQzXJI7HHx0qrhN0wM1qCxgVBeoCX6tR0Z0CUP-obx4ND5cOUEfiNGwXE9Ud2TDRp2LmPsmRvU=; osd=UlgWB0ybe03YezQ3X588HHh3p79N1wA4ryxkVxqvCXquSkF0DUDzprx8NzNbOUUchdawWExZcGTHRZCMmP8lS_I=; gdxidpyhxdE=o6H5BzX4DuYKPiwvJzfdx0YUQbfbIUQJr4HBT1Jbs0gE6CiCdTcExplNOgbyuaOnwj93phRuJU9ww%2F%2FTbOmGS9j%2F%5C%2BpXvOZDOM1WG4Uuait%2BT60bUUkUToYqojZBo%2F%2BOka4PMsCcSUn8zT%5CAA0z%2FVS67%5CbKfw4qaLGvvfb2%5C%2FiqKbLsw%3A1626312794283; YD00517437729195%3AWM_NI=MIxQ4MUs4Zfo2EX%2B4nYcRVDBze%2Bldj9X%2Bg7oiZCvJZkRqQcyMzRb0i0Du3NJrPHJqEjgEajponSSiq1S0IsUBx4Csq0ORAmP610uyS8IWp5I094WcIRZ97uxTjDCj4kseHk%3D; YD00517437729195%3AWM_NIKE=9ca17ae2e6ffcda170e2e6ee8ab16087b4fdaee763f8a88ab2c54b979b8f85f8628bb8bf8baa6d9baa8789f42af0fea7c3b92a8f97b8b2b74797adfcbbe565f29b98ccb7669bbd9eb7c74ababbe58de762fb88e588b665ab868d97c952a98ebfb2e2738fa69e83b363f49cbbd4cd42b29088abf44faab98b82e97cadb29db4ec7bf38d00aaf25f82a8fca4f27bf4919ea2f05cf6ef0096fc59fc979991b843f4e7fcb8e2439286f7d8f87498b68ca4e940a9adaba9ea37e2a3; captcha_ticket_v2="2|1:0|10:1626311906|17:captcha_ticket_v2|704:eyJ2YWxpZGF0ZSI6IkNOMzFfUkpTU0t2V3pYakg0OExDRUFTd0d3VjI4ZnhjaDhwc3dPVENSNjE2OFQyeC4wZVZVT202VzRPNVUyaEZ0RUk3VWJsSElTOGFkVEFWOHJWR2pBclItYWRqbjc0Q2JkeDFOZlpZY2JxUVo2QVdfVmZiU1BoTmFwTmRxLXVVTGEuZ1NiUzlHYnQyWFptczU0RVNlV2ZiOGFYQlJkQUlPdXAtclN0LlZ1Qy1mTk91WXJCdDFta0pDMGtRWktZeGdpQndKZmpBLV9BNS1QNlBmNnJvQi1iMEVsSkh6OWhUSi12RnBFZGlOdl9tVG1pQ1dxSklIbTBmS0Jsd3dGay1sZmJqeHFRLkZaN0ZkbV9ka3VoNC5hX3BPNC4wUUguWnluQi5iNVU1cDBkZ1FSRk5kd0pzcWIuOXg0cHgtVjRVX0lTZVh6dFdrVWdpVnNhUFR3LXRockNOdi5YRmZSRzEyZnlULnVDbXpJSzBsY1MyaVlsbXktRDRhV3ZIZ2FwOGRhQzRvSi5TR05ZSlhodk5ZZExVLU9UYkRqLTdQaHlIV1UxckNlLnBzYUtFcFJtSkRYNzVwbEd3OGN3Q1B4WDV4azdZTFNzVWhFel9wLXQ2T0RNWHhoTmVMVExTQTV5WkNLZWV5ZnBmRWlCcWtwNERwbl82RG5fNUZURS1IX29GMyJ9|48648fda288d81631bf87f771c7bac6a85abfa09833c96ead18aca841cb8d997"; z_c0="2|1:0|10:1626311906|4:z_c0|92:Mi4xM3dSNkFBQUFBQUFBVUtYWnFsQ1ZFQ1lBQUFCZ0FsVk40dHJjWVFBbUd5ZEdiS202eEJaYTJEOEtfdmRVYWJrRFpR|836a516818d6bb1718ce62da42e59bde1a7f5543cd8cc90c32e5987e01a2c677"; tshl=; tst=h; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1626311905; KLBRSID=9d75f80756f65c61b0a50d80b4ca9b13|1626311907|1626311895',
+        'Cookie':'_zap=411babfc-e770-465d-b7b9-52bffc363e0b; d_c0="ACl2apQlRCPTsjYea_vwVbIsuEsSzCwgVT4=|1577678274"; _xsrf=wVSeGxps1Mr2isWB66HrocZX6URQBVsF; _ga=GA1.2.1360518270.1578986731; __snaker__id=v5ifdofM1mvp3OvV; _9755xjdesxxd_=32; YD00517437729195%3AWM_TID=AsFC%2FPZBCG1AQRBUBUMuxra6q%2FdcNa72; q_c1=1bfa41cae2d040b7a8d6dfd02376f258|1622960582000|1578986733000; __utma=51854390.1360518270.1578986731.1606464431.1622960582.16; __utmz=51854390.1622960582.16.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=51854390.000--|2=registration_date=20140908=1^3=entry_date=20200114=1; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1626311893; captcha_session_v2="2|1:0|10:1626311895|18:captcha_session_v2|88:bXhZNDJtL09ySSthdVp6ekh5T1haeWMyd2Q0YkE4Mk1UYUNRalgrdzhLOTV3cG4rMm1uRXVNbFNrbkE4RU5lcA==|a954766337cb4dd4b69241c2d4be653e230b097b7e4ca0790f882ae63cf88b5e"; SESSIONID=LxrtPPcB3r4q2rCQNg6FqEDS2TajlTKdUUdeaFZsnlJ; JOID=UlwVCkubf07VfDQzXJI7HHx0qrhN0wM1qCxgVBeoCX6tR0Z0CUP-obx4ND5cOUEfiNGwXE9Ud2TDRp2LmPsmRvU=; osd=UlgWB0ybe03YezQ3X588HHh3p79N1wA4ryxkVxqvCXquSkF0DUDzprx8NzNbOUUchdawWExZcGTHRZCMmP8lS_I=; gdxidpyhxdE=o6H5BzX4DuYKPiwvJzfdx0YUQbfbIUQJr4HBT1Jbs0gE6CiCdTcExplNOgbyuaOnwj93phRuJU9ww%2F%2FTbOmGS9j%2F%5C%2BpXvOZDOM1WG4Uuait%2BT60bUUkUToYqojZBo%2F%2BOka4PMsCcSUn8zT%5CAA0z%2FVS67%5CbKfw4qaLGvvfb2%5C%2FiqKbLsw%3A1626312794283; YD00517437729195%3AWM_NI=MIxQ4MUs4Zfo2EX%2B4nYcRVDBze%2Bldj9X%2Bg7oiZCvJZkRqQcyMzRb0i0Du3NJrPHJqEjgEajponSSiq1S0IsUBx4Csq0ORAmP610uyS8IWp5I094WcIRZ97uxTjDCj4kseHk%3D; YD00517437729195%3AWM_NIKE=9ca17ae2e6ffcda170e2e6ee8ab16087b4fdaee763f8a88ab2c54b979b8f85f8628bb8bf8baa6d9baa8789f42af0fea7c3b92a8f97b8b2b74797adfcbbe565f29b98ccb7669bbd9eb7c74ababbe58de762fb88e588b665ab868d97c952a98ebfb2e2738fa69e83b363f49cbbd4cd42b29088abf44faab98b82e97cadb29db4ec7bf38d00aaf25f82a8fca4f27bf4919ea2f05cf6ef0096fc59fc979991b843f4e7fcb8e2439286f7d8f87498b68ca4e940a9adaba9ea37e2a3; captcha_ticket_v2="2|1:0|10:1626311906|17:captcha_ticket_v2|704:eyJ2YWxpZGF0ZSI6IkNOMzFfUkpTU0t2V3pYakg0OExDRUFTd0d3VjI4ZnhjaDhwc3dPVENSNjE2OFQyeC4wZVZVT202VzRPNVUyaEZ0RUk3VWJsSElTOGFkVEFWOHJWR2pBclItYWRqbjc0Q2JkeDFOZlpZY2JxUVo2QVdfVmZiU1BoTmFwTmRxLXVVTGEuZ1NiUzlHYnQyWFptczU0RVNlV2ZiOGFYQlJkQUlPdXAtclN0LlZ1Qy1mTk91WXJCdDFta0pDMGtRWktZeGdpQndKZmpBLV9BNS1QNlBmNnJvQi1iMEVsSkh6OWhUSi12RnBFZGlOdl9tVG1pQ1dxSklIbTBmS0Jsd3dGay1sZmJqeHFRLkZaN0ZkbV9ka3VoNC5hX3BPNC4wUUguWnluQi5iNVU1cDBkZ1FSRk5kd0pzcWIuOXg0cHgtVjRVX0lTZVh6dFdrVWdpVnNhUFR3LXRockNOdi5YRmZSRzEyZnlULnVDbXpJSzBsY1MyaVlsbXktRDRhV3ZIZ2FwOGRhQzRvSi5TR05ZSlhodk5ZZExVLU9UYkRqLTdQaHlIV1UxckNlLnBzYUtFcFJtSkRYNzVwbEd3OGN3Q1B4WDV4azdZTFNzVWhFel9wLXQ2T0RNWHhoTmVMVExTQTV5WkNLZWV5ZnBmRWlCcWtwNERwbl82RG5fNUZURS1IX29GMyJ9|48648fda288d81631bf87f771c7bac6a85abfa09833c96ead18aca841cb8d997"; z_c0="2|1:0|10:1626311906|4:z_c0|92:Mi4xM3dSNkFBQUFBQUFBVUtYWnFsQ1ZFQ1lBQUFCZ0FsVk40dHJjWVFBbUd5ZEdiS202eEJaYTJEOEtfdmRVYWJrRFpR|836a516818d6bb1718ce62da42e59bde1a7f5543cd8cc90c32e5987e01a2c677"; tshl=; tst=h; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1626311905; KLBRSID=9d75f80756f65c61b0a50d80b4ca9b13|1626311907|1626311895',
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
         # 'Path': '/hot',
@@ -75,7 +75,7 @@ def weibo_top_spider():
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie': 'SINAGLOBAL=1493116408036.9385.1616917718110; SUBP=0033WrSXqPxfM725Ws9jqgMF5529P9D9Wh.TQ2B19Sr2bKsk3uqncwL5JpX5K-hUgL.Foq0eoB4ehqpSKM2dJLoIEXLxKML12-L12zLxKMLBKML1h5LxK.LBo.L1h-LxKqL1-eLB-eLxK.LBo.L1h-t; wvr=6; UOR=,,login.sina.com.cn; SCF=As41YUbARfCs0yEmw9wKUxQ1pf4kNO7ZI7xuSVZJ8GQntL6RONTZxFbzCR6yWizd-UKv2KgJ0pi_9V84nUx7m-w.; SUB=_2A25N_smMDeRhGeBN6VYY8CjNzjuIHXVujbxErDV8PUJbmtB-LUOgkW9NRJG5h18eScBhVRGI6ScdM-3ou3UqBoUg; ALF=1658580315; SSOLoginState=1627044316; _s_tentry=login.sina.com.cn; Apache=7408768118597.193.1627044318452; ULV=1627044318561:5:2:2:7408768118597.193.1627044318452:1626831233759; webim_unReadCount=%7B%22time%22%3A1627044321175%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A5%2C%22msgbox%22%3A0%7D; WBStorage=2ceabba76d81138d|undefined',
+        'Cookie': 'SINAGLOBAL=1493116408036.9385.1616917718110; SUBP=0033WfrSXqPxfM725Ws9jqgMF5529P9D9Wh.TQ2B19Sr2bKsk3uqncwL5JpX5K-hUgL.Foq0eoB4ehqpSKM2dJLoIEXLxKML12-L12zLxKMLBKML1h5LxK.LBo.L1h-LxKqL1-eLB-eLxK.LBo.L1h-t; wvr=6; UOR=,,login.sina.com.cn; SCF=As41YUbARfCs0yEmw9wKUxQ1pf4kNO7ZI7xuSVZJ8GQntL6RONTZxFbzCR6yWizd-UKv2KgJ0pi_9V84nUx7m-w.; SUB=_2A25N_smMDeRhGeBN6VYY8CjNzjuIHXVujbxErDV8PUJbmtB-LUOgkW9NRJG5h18eScBhVRGI6ScdM-3ou3UqBoUg; ALF=1658580315; SSOLoginState=1627044316; _s_tentry=login.sina.com.cn; Apache=7408768118597.193.1627044318452; ULV=1627044318561:5:2:2:7408768118597.193.1627044318452:1626831233759; webim_unReadCount=%7B%22time%22%3A1627044321175%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A5%2C%22msgbox%22%3A0%7D; WBStorage=2ceabba76d81138d|undefined',
         'Host': 's.weibo.com',
         # 'Authority': 'www.zhihu.com',
         # 'method':'GET',
@@ -206,15 +206,15 @@ class work(QWidget):
 
 
 
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e60051aa5f75deaff33121df6635c6ee36f6fa'
+
         with open('SCKEY.val', 'w') as f:
             f.write(SCKEY)
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCT55216To0rOvln8HrYv9n6fUkHhlF'
+
 
         req = auto_push(SCKEY, 'baidu')
 
     def display_zhihu(self):
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e6001aa5f75deaff33121df6635fc6e4e36f6fa'
+
         if self.te1.text() != '':
             SCKEY = self.te1.text()
         elif os.path.isfile('SCKEY.val'):
@@ -228,14 +228,14 @@ class work(QWidget):
 
 
 
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tbf53e60051aa5f75deaff33121df6635fc6e4e36f6fa'
+
         with open('SCKEY.val', 'w') as f:
             f.write(SCKEY)
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCT55216To0rOvln8HrYv9n6fUXkHhlF'
+
         req = auto_push(SCKEY, 'zhihu')
 
     def display_weibo(self):
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e0051aa5f75deaff33121df6635fc6e4e36f6fa'
+
         if self.te1.text() != '':
             SCKEY = self.te1.text()
         elif os.path.isfile('SCKEY.val'):
@@ -249,14 +249,21 @@ class work(QWidget):
 
 
 
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e6001aa5f5deaff33121df6635fc6e4e36f6fa'
         with open('SCKEY.val', 'w') as f:
             f.write(SCKEY)
-        # SCKEY = self.te1.text() if self.te1.text() != '' else 'SCT55216To0OJvln8HrYv9n6fUXkHhlF'
+
         req = auto_push(SCKEY, 'weibo')
 
     def display_auto(self):
-        SCKEY = self.te1.text() if self.te1.text() != '' else 'SCU131854Tb2f53e6001aa5f75deaff33121df6635fc6e4e36f6fa'
+        if self.te1.text() != '':
+            SCKEY = self.te1.text()
+        elif os.path.isfile('SCKEY.val'):
+            with open('SCKEY.val', 'r') as f:
+                SCKEY = f.readline()
+        else:
+            SCKEY = ''
+
+        assert SCKEY != '', 'SCKEY is none! please type your SCKEY'
         hour = self.te2.text() if self.te2.text() != '' else '3'
         req = auto_push_repeat(SCKEY, hour)
 
