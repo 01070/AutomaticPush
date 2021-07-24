@@ -10,7 +10,8 @@
 4. 在第一次使用时，需要输入SendKey码，之后系统会将SendKey码保存到本地文件中，无需再次输入，当重新输入时，系统也会修改本地的文件。在间隔时间处可填写推送的间隔，从而实现定时的推送（可空缺，此时系统会默认24小时推送一次）  
 5. 选择推送内容
 
-![image][]
-
+![image][https://github.com/01070/AutomaticPush/blob/master/image/image0.png]
+![image][https://github.com/01070/AutomaticPush/blob/master/image/image1.jpg]
+![image][https://github.com/01070/AutomaticPush/blob/master/image/image0.jpg]
 
 
