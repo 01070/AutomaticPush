@@ -14,6 +14,6 @@
 
 ![image](https://github.com/01070/AutomaticPush/blob/master/image/image1.jpg)
 
-![image](https://github.com/01070/AutomaticPush/blob/master/image/image0.jpg)
+![image](https://github.com/01070/AutomaticPush/blob/master/image/image2.jpg)
 
 
