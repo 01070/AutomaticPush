@@ -1,5 +1,5 @@
 # AutomaticPush  
-自动爬取知乎 微博 百度头条，通过server酱推送到微信
+自动爬取知乎、微博、百度头条，通过BERT进行主题分类，并使用server酱推送到微信
 ## requirement  
 * PyQt5
 * torch>=1.0
